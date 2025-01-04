@@ -14,6 +14,7 @@ import gg.rsmod.plugins.api.InterfaceDestination
 import gg.rsmod.plugins.api.PrayerIcon
 import gg.rsmod.plugins.api.Skills
 import gg.rsmod.plugins.api.ext.*
+import net.runelite.http.api.hiscore.Skill
 
 object Prayers {
 
@@ -267,6 +268,11 @@ object Prayers {
             p.prayerIcon = icon.id
             p.addBlock(UpdateBlockType.APPEARANCE)
         }
+    }
+
+    fun rechargePrayerPoints(player: Player) {
+        player.getSkills().alterCurrentLevel(Skills.PRAYER, player.getSkills().getMaxLevel(Skills.PRAYER))
+        player.getSkills().restore(Skills.PRAYER)
     }
 
     private fun calculateDrainRate(p: Player): Int = Prayer.values.filter { isActive(p, it) }.sumBy { it.drainEffect }

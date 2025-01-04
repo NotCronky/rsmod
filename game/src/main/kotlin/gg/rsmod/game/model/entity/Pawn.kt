@@ -574,6 +574,22 @@ abstract class Pawn(val world: World) : Entity() {
     }
 
     fun queue(priority: TaskPriority = TaskPriority.STANDARD, logic: suspend QueueTask.(CoroutineScope) -> Unit) {
+        if (this is Player && priority == TaskPriority.STRONG) {
+            this.closeInterfaceModal()
+        }
+        queues.queue(this, world.coroutineDispatcher, priority, logic)
+    }
+
+    fun lockQueue(
+        priority: TaskPriority = TaskPriority.STANDARD,
+        lockState: LockState = LockState.FULL,
+        logic: suspend QueueTask.(CoroutineScope) -> Unit
+    ) {
+        lock = lockState
+
+        if (this is Player && priority == TaskPriority.STRONG) {
+            this.closeInterfaceModal()
+        }
         queues.queue(this, world.coroutineDispatcher, priority, logic)
     }
 

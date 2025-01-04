@@ -2,7 +2,6 @@
 package gg.rsmod.plugins.api.cfg
 
 object Npcs {
-
     const val TOOL_LEPRECHAUN = 0
     const val MOLANISK_1 = 1
     const val ABERRANT_SPECTRE_2 = 2

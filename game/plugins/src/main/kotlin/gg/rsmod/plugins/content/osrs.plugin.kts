@@ -2,6 +2,8 @@ package gg.rsmod.plugins.content
 
 import gg.rsmod.game.model.attr.INTERACTING_ITEM_SLOT
 import gg.rsmod.game.model.attr.OTHER_ITEM_SLOT_ATTR
+import gg.rsmod.game.model.bits.INFINITE_VARS_STORAGE
+import gg.rsmod.game.model.bits.InfiniteVarsType
 
 /**
  * Closing main modal for players.
@@ -33,7 +35,6 @@ on_login {
     player.sendWeaponComponentInformation()
     player.sendCombatLevelText()
 
-
     // Interface-related logic.
     player.openOverlayInterface(player.interfaces.displayMode)
     InterfaceDestination.values.filter { pane -> pane.interfaceId != -1 }.forEach { pane ->
@@ -64,7 +65,7 @@ on_login {
     player.sendOption("Report", 5)
 
     // Game-related logic.
-    player.sendRunEnergy(player.runEnergy.toInt())
+    player.toggleStorageBit(INFINITE_VARS_STORAGE, InfiniteVarsType.RUN)
     player.message("Welcome to ${world.gameContext.name}.", ChatMessageType.GAME_MESSAGE)
 }
 

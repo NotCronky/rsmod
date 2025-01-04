@@ -5,6 +5,7 @@ import gg.rsmod.game.model.bits.INFINITE_VARS_STORAGE
 import gg.rsmod.game.model.bits.InfiniteVarsType
 import gg.rsmod.game.model.combat.CombatClass
 import gg.rsmod.game.model.priv.Privilege
+import gg.rsmod.game.sync.block.UpdateBlockType
 import gg.rsmod.plugins.content.combat.CombatConfigs
 import gg.rsmod.plugins.content.combat.formula.MagicCombatFormula
 import gg.rsmod.plugins.content.combat.formula.MeleeCombatFormula
@@ -43,6 +44,14 @@ on_command("max") {
 on_command("empty") {
     player.inventory.removeAll()
 }
+
+on_command("appearance") {
+        player.queue(TaskPriority.WEAK) {
+            val appearance = selectAppearance() ?: return@queue
+            player.appearance = appearance
+            player.addBlock(UpdateBlockType.APPEARANCE)
+        }
+    }
 
 on_command("reboot", Privilege.ADMIN_POWER) {
     val args = player.getCommandArgs()
@@ -202,6 +211,57 @@ on_command("reset", Privilege.ADMIN_POWER) {
         player.getSkills().setBaseLevel(i, if (i == Skills.HITPOINTS) 10 else 1)
     }
     player.calculateAndSetCombatLevel()
+}
+
+on_command("to", Privilege.ADMIN_POWER) {
+    val args = player.getCommandArgs()
+    tryWithUsage(player, args, "Invalid format! Example of proper command <col=801700>::to LOCATION</col>") { values ->
+        val location = values[0].toString()
+        location.forEach {
+            if (location == "lumbridge") {
+                player.moveTo(x = 3221, z = 3218)
+            }
+            else if (location == "varrock") {
+                player.moveTo(x = 3213, z = 3429)
+            }
+            else if (location == "varrocksewers") {
+                player.moveTo(x = 3237, z = 9858)
+            }
+            else if (location == "ge") {
+                player.moveTo(x = 3164, z = 3476)
+            }
+            else if (location == "edgeville") {
+                player.moveTo(x = 3088, z = 3492)
+            }
+            else if (location == "dwarfmines") {
+                player.moveTo(x = 3020, z = 9849)
+            }
+            else if (location == "falador") {
+                player.moveTo(x = 2963, z = 3381)
+            }
+            else if (location == "wizardstower") {
+                player.moveTo(x = 3109, z = 3168)
+            }
+            else if (location == "draynor") {
+                player.moveTo(x = 3103, z = 3249)
+            }
+            else if (location == "evildave") {
+                player.moveTo(x = 3077, z = 9893)
+            }
+            else if (location == "soslvl1") {
+                player.moveTo(x = 1863, z = 5241)
+            }
+            else if (location == "soslvl2") {
+                player.moveTo(x = 2042, z = 5245)
+            }
+            else if (location == "soslvl3") {
+                player.moveTo(x = 2122, z = 5251)
+            }
+            else if (location == "soslvl4") {
+                player.moveTo(x = 2358, z = 5215)
+            }
+        }
+    }
 }
 
 on_command("setlvl", Privilege.ADMIN_POWER) {
