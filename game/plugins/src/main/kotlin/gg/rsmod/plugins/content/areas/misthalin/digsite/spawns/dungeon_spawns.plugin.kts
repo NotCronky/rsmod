@@ -1,0 +1,15 @@
+package gg.rsmod.plugins.content.areas.misthalin.digsite.spawns
+
+spawn_npc(npc = 3629, x = 3349, z = 9823, height = 0, walkRadius = 2, direction = Direction.NORTH)
+spawn_npc(npc = 71, x = 3369, z = 9810, height = 0, walkRadius = 2, direction = Direction.NORTH)
+spawn_npc(npc = 71, x = 3383, z = 9749, height = 0, walkRadius = 2, direction = Direction.EAST)
+spawn_npc(npc = 70, x = 3378, z = 9749, height = 0, walkRadius = 2, direction = Direction.NORTH_WEST)
+spawn_npc(npc = 70, x = 3378, z = 9752, height = 0, walkRadius = 2, direction = Direction.WEST)
+spawn_npc(npc = 72, x = 3378, z = 9755, height = 0, walkRadius = 2, direction = Direction.WEST)
+spawn_npc(npc = 73, x = 3380, z = 9759, height = 0, walkRadius = 2, direction = Direction.EAST)
+spawn_npc(npc = 71, x = 3381, z = 9765, height = 0, walkRadius = 2, direction = Direction.NORTH)
+spawn_npc(npc = 71, x = 3365, z = 9745, height = 0, walkRadius = 2, direction = Direction.WEST)
+spawn_npc(npc = 70, x = 3374, z = 9746, height = 0, walkRadius = 2, direction = Direction.WEST)
+spawn_npc(npc = 73, x = 3375, z = 9744, height = 0, walkRadius = 2, direction = Direction.EAST)
+spawn_npc(npc = 72, x = 3382, z = 9744, height = 0, walkRadius = 2, direction = Direction.EAST)
+spawn_npc(npc = 73, x = 3377, z = 9802, height = 0, walkRadius = 2, direction = Direction.SOUTH)

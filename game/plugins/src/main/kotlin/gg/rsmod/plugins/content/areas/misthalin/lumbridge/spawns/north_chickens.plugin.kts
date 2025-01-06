@@ -1,0 +1,17 @@
+package gg.rsmod.plugins.content.areas.misthalin.lumbridge.spawns
+
+spawn_npc(npc = 1173, x = 3230, z = 3298, height = 0, walkRadius = 2, direction = Direction.SOUTH_WEST)
+spawn_npc(npc = 1174, x = 3234, z = 3299, height = 0, walkRadius = 2, direction = Direction.SOUTH)
+spawn_npc(npc = 1174, x = 3237, z = 3298, height = 0, walkRadius = 2, direction = Direction.EAST)
+spawn_npc(npc = 1174, x = 3230, z = 3297, height = 0, walkRadius = 2, direction = Direction.EAST)
+spawn_npc(npc = 1173, x = 3227, z = 3296, height = 0, walkRadius = 2, direction = Direction.WEST)
+spawn_npc(npc = 1174, x = 3228, z = 3295, height = 0, walkRadius = 2, direction = Direction.SOUTH)
+spawn_npc(npc = 1173, x = 3229, z = 3295, height = 0, walkRadius = 2, direction = Direction.SOUTH)
+spawn_npc(npc = 1173, x = 3237, z = 3294, height = 0, walkRadius = 2, direction = Direction.SOUTH)
+spawn_npc(npc = 1838, x = 3218, z = 3296, height = 0, walkRadius = 2, direction = Direction.SOUTH)
+spawn_npc(npc = 1839, x = 3213, z = 3303, height = 0, walkRadius = 2, direction = Direction.WEST)
+spawn_npc(npc = 1838, x = 3213, z = 3322, height = 0, walkRadius = 2, direction = Direction.EAST)
+spawn_npc(npc = 1839, x = 3213, z = 3320, height = 0, walkRadius = 2, direction = Direction.NORTH)
+spawn_npc(npc = 5007, x = 3211, z = 3308, height = 0, walkRadius = 2, direction = Direction.EAST)
+spawn_npc(npc = 1838, x = 3214, z = 3320, height = 0, walkRadius = 2, direction = Direction.SOUTH_EAST)
+spawn_npc(npc = 1351, x = 3226, z = 3289, height = 0, walkRadius = 2, direction = Direction.EAST)
