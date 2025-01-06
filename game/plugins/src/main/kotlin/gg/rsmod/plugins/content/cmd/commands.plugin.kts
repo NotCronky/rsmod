@@ -260,6 +260,12 @@ on_command("to", Privilege.ADMIN_POWER) {
             else if (location == "soslvl4") {
                 player.moveTo(x = 2358, z = 5215)
             }
+            else if (location == "motherlodemine") {
+                player.moveTo(x = 3750, z = 5669)
+            }
+            else if (location == "fremslayer") {
+                player.moveTo(x = 2806, z = 10002)
+            }
         }
     }
 }
